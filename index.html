@@ -14,70 +14,62 @@
   <meta property="og:image" content="https://www.aureca.fr/og-image.png">
   <style>
     :root{
-      --bg: #0b1020;        /* bleu nuit profond */
-      --bg-2:#0f1630;
-      --fg: #e8eef6;        /* texte principal */
-      --muted:#a9b5c7;      /* texte secondaire */
-      --brand:#36D1A8;      /* accent menthe */
-      --brand-2:#6EE7D3;    /* accent clair */
-      --card:#121a34;       /* fond cartes */
-      --line:rgba(255,255,255,0.08);
-      --shadow: 0 20px 35px rgba(0,0,0,.35);
-      --radius: 18px;
+      --bg:#0b1020; --bg-2:#0f1630; --fg:#e8eef6; --muted:#a9b5c7;
+      --brand:#36D1A8; --brand-2:#6EE7D3; --card:#11162d; --line:rgba(255,255,255,.08);
+      --shadow:0 24px 60px rgba(0,0,0,.35); --radius:20px;
     }
-    @media (prefers-color-scheme: light) {
-      :root{--bg:#ffffff;--bg-2:#f5f7fb;--fg:#0b1020;--muted:#4a5568;--card:#ffffff;--line:rgba(0,0,0,.07);--shadow:0 10px 25px rgba(17,24,39,.08)}
+    @media (prefers-color-scheme: light){
+      :root{--bg:#ffffff;--bg-2:#f5f7fb;--fg:#0b1020;--muted:#4a5568;--card:#ffffff;--line:rgba(0,0,0,.08);--shadow:0 18px 50px rgba(17,24,39,.08)}
     }
     *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:radial-gradient(1200px 600px at 70% -10%, #1b255a 0%, transparent 60%), linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);color:var(--fg);font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";line-height:1.55}
+    html,body{margin:0;padding:0;background:radial-gradient(1200px 600px at 70% -10%, #1b255a 0%, transparent 60%), linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);color:var(--fg);font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Inter,"Helvetica Neue",Arial;line-height:1.7}
     a{color:var(--brand);text-decoration:none}
     a:hover{text-decoration:underline}
-    .container{max-width:1120px;margin:0 auto;padding:0 20px}
-    header{position:sticky;top:0;z-index:50;background:linear-gradient(180deg, rgba(11,16,32,.85), rgba(11,16,32,.55));backdrop-filter:saturate(1.2) blur(8px);border-bottom:1px solid var(--line)}
-    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
-    .logo{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.5px}
-    .logo-badge{display:grid;place-items:center;width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg, var(--brand), var(--brand-2));color:#001b12;font-weight:900;box-shadow:var(--shadow)}
-    .logo-word{font-size:1.05rem}
-    .nav a{color:var(--fg);opacity:.85}
-    .nav-links{display:flex;gap:20px}
-    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:12px;border:1px solid var(--line);background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));color:var(--fg);font-weight:600}
+    .container{max-width:1240px;margin:0 auto;padding:0 28px}
+    header{position:sticky;top:0;z-index:50;background:linear-gradient(180deg, rgba(11,16,32,.9), rgba(11,16,32,.6));backdrop-filter:saturate(1.15) blur(10px);border-bottom:1px solid var(--line)}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+    .logo{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.4px}
+    .logo-badge{display:grid;place-items:center;width:42px;height:42px;border-radius:14px;background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#001b12;font-weight:900;box-shadow:var(--shadow)}
+    .logo-word{font-size:1.1rem}
+    .nav-links{display:flex;gap:26px}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:13px 20px;border-radius:14px;border:1px solid var(--line);background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));color:var(--fg);font-weight:600}
     .btn:hover{transform:translateY(-1px);box-shadow:var(--shadow)}
-    .btn-primary{background:linear-gradient(135deg, var(--brand), var(--brand-2));color:#04251c;border:none}
+    .btn-primary{background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#04251c;border:none}
 
     /* hero */
-    .hero{padding:90px 0 40px;position:relative}
-    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
-    .eyebrow{display:inline-block;padding:6px 10px;border:1px solid var(--line);border-radius:999px;font-size:.85rem;color:var(--muted)}
-    h1{font-size:clamp(2rem, 3.6vw, 3rem);line-height:1.1;margin:18px 0 12px}
-    .lead{font-size:1.15rem;color:var(--muted);max-width:55ch}
-    .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
-    .hero-card{background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));border:1px solid var(--line);border-radius:var(--radius);padding:18px;display:flex;gap:12px;align-items:flex-start}
-    .hero-card strong{display:block}
-    .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:24px}
+    .hero{padding:120px 0 70px;position:relative}
+    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+    .eyebrow{display:inline-block;padding:8px 12px;border:1px solid var(--line);border-radius:999px;font-size:.9rem;color:var(--muted)}
+    h1{font-size:clamp(2.4rem,3.8vw,3.4rem);line-height:1.15;margin:20px 0 14px;letter-spacing:.2px}
+    .lead{font-size:1.2rem;color:var(--muted);max-width:68ch}
+    .cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:26px}
+    .hero-card{background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));border:1px solid var(--line);border-radius:var(--radius);padding:20px;display:flex;gap:14px;align-items:flex-start}
+    .hero-card strong{display:block;margin-bottom:2px}
+    .kpis{display:grid;grid-template-columns:repeat(3, minmax(0,1fr));gap:16px;margin-top:28px}
 
     /* sections */
-    section{padding:56px 0;border-top:1px solid var(--line)}
-    h2{font-size:clamp(1.6rem, 2.6vw, 2.2rem);margin:0 0 10px}
+    section{padding:80px 0;border-top:1px solid var(--line)}
+    h2{font-size:clamp(1.8rem,2.6vw,2.3rem);margin:0 0 14px}
     .muted{color:var(--muted)}
-    .grid{display:grid;gap:16px}
+    .grid{display:grid;gap:24px}
     .cards{grid-template-columns:repeat(2,1fr)}
-    .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px}
-    .card h3{margin:0 0 6px}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+    .card p{max-width:70ch}
     .list{margin:0;padding-left:18px}
 
     /* timeline */
-    .timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-    .step{position:relative;padding:18px;border:1px dashed var(--line);border-radius:var(--radius);background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.01))}
-    .step .n{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:999px;background:linear-gradient(135deg, var(--brand), var(--brand-2));color:#07261c;font-weight:800;margin-bottom:6px}
+    .timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+    .step{position:relative;padding:22px;border:1px dashed var(--line);border-radius:var(--radius);background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.01))}
+    .step .n{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:999px;background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#07261c;font-weight:800;margin-bottom:8px}
 
     /* contact */
-    .contact{display:grid;grid-template-columns:1.1fr .9fr;gap:20px}
-    form{display:grid;gap:12px}
-    input,textarea{width:100%;padding:12px 14px;border-radius:12px;border:1px solid var(--line);background:rgba(255,255,255,.02);color:var(--fg)}
+    .contact{display:grid;grid-template-columns:1.1fr .9fr;gap:26px}
+    form{display:grid;gap:14px}
+    input,textarea{width:100%;padding:14px 16px;border-radius:14px;border:1px solid var(--line);background:rgba(255,255,255,.02);color:var(--fg)}
     label{font-weight:600}
 
-    footer{padding:30px 0;border-top:1px solid var(--line);color:var(--muted)}
-    .tiny{font-size:.9rem}
+    footer{padding:34px 0;border-top:1px solid var(--line);color:var(--muted)}
+    .tiny{font-size:.95rem}
 
     /* responsive */
     @media (max-width: 980px){
@@ -88,8 +80,9 @@
       .contact{grid-template-columns:1fr}
       .nav-links{display:none}
       .menu-btn{display:inline-flex}
+      .hero{padding-top:84px}
     }
-    @media (min-width: 981px){.menu-btn{display:none}}
+    @media (min-width:981px){.menu-btn{display:none}}
   </style>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' x2='1' y1='1' y2='0'%3E%3Cstop stop-color='%2336D1A8'/%3E%3Cstop offset='1' stop-color='%236EE7D3'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect rx='12' ry='12' width='48' height='48' fill='url(%23g)'/%3E%3Ctext x='50%25' y='58%25' text-anchor='middle' font-family='Inter,Arial' font-size='22' font-weight='900' fill='%2304251c'%3EA%3C/text%3E%3C/svg%3E">
   <script>
@@ -136,10 +129,10 @@
         <div>
           <span class="eyebrow">Conseil · Systèmes & Réseaux · Cloud · Automatisation · Sécurité</span>
           <h1>Renouveler l’existant. <br>Accélérer la suite.</h1>
-          <p class="lead">AURECA conçoit et livre des plateformes **simples, sûres et efficaces** : audit pragmatique, modernisation cloud, automatisation (IaC/CI‑CD/SRE) et sécurité intégrée. Objectif : moins d’incidents, plus de débit de changement — **mesurable**.</p>
+          <p class="lead">AURECA conçoit et met en œuvre des plateformes <strong>plus simples, plus sûres et plus efficaces</strong> : audit pragmatique, modernisation cloud, automatisation (IaC/CI‑CD/SRE) et sécurité intégrée. Moins d’incidents, plus de débit de changement — résultats mesurables.</p>
           <div class="cta-row">
             <a class="btn btn-primary" href="mailto:contact@aureca.fr?subject=Demande%20d'audit%20AURECA">Demander un audit</a>
-            <a class="btn" href="tel:+33743668266">Appeler le +33 7 43 66 82 66</a>
+            <a class="btn" href="tel:+33743668266">Appeler le +33 7 43 66 82 66</a>
           </div>
           <div class="kpis">
             <div class="hero-card" aria-label="Bénéfice 1">
@@ -221,7 +214,7 @@
             </div>
             <div>
               <strong>Téléphone</strong><br>
-              <a href="tel:+33743668266">+33 7 43 66 82 66</a>
+              <a href="tel:+33743668266">+33 7 43 66 82 66</a>
               <button class="btn" style="margin-left:8px" onclick="copy('+33743668266')">Copier</button>
             </div>
             <div id="copy-toast" hidden class="muted tiny">Copié ✅</div>
@@ -236,7 +229,12 @@
             <label for="f-msg">Message</label>
             <textarea id="f-msg" name="Message" rows="5" placeholder="Parlez‑nous de vos objectifs…" required></textarea>
             <button class="btn btn-primary" type="submit">Envoyer</button>
-            <p class="tiny muted">En envoyant, vous acceptez d’être contacté par AURECA. Aucune donnée transmise à des tiers.</p>
+            <p class="tiny muted">
+            Éditeur : <strong>AURECA</strong> — Micro‑entreprise (en cours de création).<br>
+            Siège social : 79 Bis rue Victor Hugo, 76320 Caudebec‑lès‑Elbeuf — Email : <a href="mailto:contact@aureca.fr">contact@aureca.fr</a> — Tél. : <a href="tel:+33743668266">+33 7 43 66 82 66</a>.<br>
+            Directeur de la publication : Thomas MIDRIER (Entrepreneur individuel – AURECA). Hébergeur : GitHub Pages.<br>
+            © <span id="year"></span> AURECA. Tous droits réservés.
+          </p>
           </form>
         </div>
       </div>
@@ -248,8 +246,8 @@
         <div class="card">
           <p class="tiny muted">
             Éditeur : <strong>AURECA</strong> — Micro‑entreprise (en cours de création).<br>
-            Siège social : <em>79 Bis rue Victor Hugo, 76320 Caudebec-lès-Elbeuf</em> — Email : <a href="mailto:contact@aureca.fr">contact@aureca.fr</a> — Tél. : <a href="tel:+33743668266">+33 7 43 66 82 66</a>.<br>
-            Directeur de publication : <em>Thomas MIDRIER (Entrepreneur infividuel - AURECA)</em>. Hébergeur : <em>GitHub Pages</em> <br>
+            Siège social : <em>à compléter</em> — Email : <a href="mailto:contact@aureca.fr">contact@aureca.fr</a> — Tél. : <a href="tel:+33743668266">+33 6 00 00 00 00</a>.<br>
+            Directeur de publication : <em>à compléter</em>. Hébergeur : <em>à compléter</em> (par ex. Netlify / Vercel / GitHub Pages).<br>
             © <span id="year"></span> AURECA. Tous droits réservés.
           </p>
         </div>
