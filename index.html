@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="fr" class="no-js">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8">\>
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AURECA — Conseil, Modernisation Systèmes & Réseaux, Cloud, Automatisation</title>
@@ -13,14 +13,8 @@
   <meta property="og:url" content="https://www.aureca.fr/">
   <meta property="og:image" content="https://www.aureca.fr/og-image.png">
   <style>
-    :root{
-      --bg:#0b1020; --bg-2:#0f1630; --fg:#e8eef6; --muted:#a9b5c7;
-      --brand:#36D1A8; --brand-2:#6EE7D3; --card:#11162d; --line:rgba(255,255,255,.08);
-      --shadow:0 24px 60px rgba(0,0,0,.35); --radius:20px;
-    }
-    @media (prefers-color-scheme: light){
-      :root{--bg:#ffffff;--bg-2:#f5f7fb;--fg:#0b1020;--muted:#4a5568;--card:#ffffff;--line:rgba(0,0,0,.08);--shadow:0 18px 50px rgba(17,24,39,.08)}
-    }
+    :root{ --bg:#0b1020; --bg-2:#0f1630; --fg:#e8eef6; --muted:#a9b5c7; --brand:#36D1A8; --brand-2:#6EE7D3; --card:#11162d; --line:rgba(255,255,255,.08); --shadow:0 24px 60px rgba(0,0,0,.35); --radius:20px; }
+    @media (prefers-color-scheme: light){ :root{--bg:#ffffff;--bg-2:#f5f7fb;--fg:#0b1020;--muted:#4a5568;--card:#ffffff;--line:rgba(0,0,0,.08);--shadow:0 18px 50px rgba(17,24,39,.08)} }
     *{box-sizing:border-box}
     html,body{margin:0;padding:0;background:radial-gradient(1200px 600px at 70% -10%, #1b255a 0%, transparent 60%), linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);color:var(--fg);font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Inter,"Helvetica Neue",Arial;line-height:1.7}
     a{color:var(--brand);text-decoration:none}
@@ -35,9 +29,7 @@
     .btn{display:inline-flex;align-items:center;gap:10px;padding:13px 20px;border-radius:14px;border:1px solid var(--line);background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));color:var(--fg);font-weight:600}
     .btn:hover{transform:translateY(-1px);box-shadow:var(--shadow)}
     .btn-primary{background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#04251c;border:none}
-
-    /* hero */
-    .hero{padding:120px 0 70px;position:relative}
+    .hero{padding:120px 0 70px}
     .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
     .eyebrow{display:inline-block;padding:8px 12px;border:1px solid var(--line);border-radius:999px;font-size:.9rem;color:var(--muted)}
     h1{font-size:clamp(2.4rem,3.8vw,3.4rem);line-height:1.15;margin:20px 0 14px;letter-spacing:.2px}
@@ -46,8 +38,6 @@
     .hero-card{background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));border:1px solid var(--line);border-radius:var(--radius);padding:20px;display:flex;gap:14px;align-items:flex-start}
     .hero-card strong{display:block;margin-bottom:2px}
     .kpis{display:grid;grid-template-columns:repeat(3, minmax(0,1fr));gap:16px;margin-top:28px}
-
-    /* sections */
     section{padding:80px 0;border-top:1px solid var(--line)}
     h2{font-size:clamp(1.8rem,2.6vw,2.3rem);margin:0 0 14px}
     .muted{color:var(--muted)}
@@ -56,61 +46,26 @@
     .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px}
     .card p{max-width:70ch}
     .list{margin:0;padding-left:18px}
-
-    /* timeline */
     .timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
     .step{position:relative;padding:22px;border:1px dashed var(--line);border-radius:var(--radius);background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.01))}
     .step .n{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:999px;background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#07261c;font-weight:800;margin-bottom:8px}
-
-    /* contact */
     .contact{display:grid;grid-template-columns:1.1fr .9fr;gap:26px}
     form{display:grid;gap:14px}
     input,textarea{width:100%;padding:14px 16px;border-radius:14px;border:1px solid var(--line);background:rgba(255,255,255,.02);color:var(--fg)}
     label{font-weight:600}
-
     footer{padding:34px 0;border-top:1px solid var(--line);color:var(--muted)}
     .tiny{font-size:.95rem}
-
-    /* responsive */
-    @media (max-width: 980px){
-      .hero-grid{grid-template-columns:1fr}
-      .kpis{grid-template-columns:1fr 1fr}
-      .cards{grid-template-columns:1fr}
-      .timeline{grid-template-columns:1fr 1fr}
-      .contact{grid-template-columns:1fr}
-      .nav-links{display:none}
-      .menu-btn{display:inline-flex}
-      .hero{padding-top:84px}
-    }
+    @media (max-width:980px){ .hero-grid{grid-template-columns:1fr} .kpis{grid-template-columns:1fr 1fr} .cards{grid-template-columns:1fr} .timeline{grid-template-columns:1fr 1fr} .contact{grid-template-columns:1fr} .nav-links{display:none} .menu-btn{display:inline-flex} .hero{padding-top:84px} }
     @media (min-width:981px){.menu-btn{display:none}}
   </style>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' x2='1' y1='1' y2='0'%3E%3Cstop stop-color='%2336D1A8'/%3E%3Cstop offset='1' stop-color='%236EE7D3'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect rx='12' ry='12' width='48' height='48' fill='url(%23g)'/%3E%3Ctext x='50%25' y='58%25' text-anchor='middle' font-family='Inter,Arial' font-size='22' font-weight='900' fill='%2304251c'%3EA%3C/text%3E%3C/svg%3E">
-  <script>
-    document.documentElement.classList.remove('no-js');
-    function copy(text){navigator.clipboard?.writeText(text);const t=document.getElementById('copy-toast');if(t){t.hidden=false;setTimeout(()=>t.hidden=true,1800)}}
-    function toggleMenu(){const l=document.querySelector('.nav-links');if(!l)return;l.style.display = l.style.display==='flex' ? 'none' : 'flex'}
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "AURECA",
-    "url": "https://www.aureca.fr/",
-    "description": "Conseil & projets en systèmes, réseaux, cloud et automatisation.",
-    "email": "contact@aureca.fr",
-    "telephone": "+33 7 43 66 82 66",
-    "sameAs": [],
-    "logo": "https://www.aureca.fr/logo.svg"
-  }
-  </script>
+  <script>document.documentElement.classList.remove('no-js');function copy(t){navigator.clipboard?.writeText(t);const e=document.getElementById('copy-toast');e&&(e.hidden=false,setTimeout(()=>e.hidden=true,1800))}function toggleMenu(){const l=document.querySelector('.nav-links');l&&(l.style.display='flex'===l.style.display?'none':'flex')}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"AURECA","url":"https://www.aureca.fr/","description":"Conseil & projets en systèmes, réseaux, cloud et automatisation.","email":"contact@aureca.fr","telephone":"+33 7 43 66 82 66","sameAs":[],"logo":"https://www.aureca.fr/logo.svg"}</script>
 </head>
 <body>
   <header>
     <div class="container nav">
-      <a class="logo" href="#">
-        <span class="logo-badge" aria-hidden="true">A</span>
-        <span class="logo-word">AURECA</span>
-      </a>
+      <a class="logo" href="#"><span class="logo-badge" aria-hidden="true">A</span><span class="logo-word">AURECA</span></a>
       <nav>
         <button class="btn menu-btn" onclick="toggleMenu()" aria-label="Ouvrir le menu">Menu</button>
         <div class="nav-links">
@@ -122,7 +77,6 @@
       </nav>
     </div>
   </header>
-
   <main>
     <section class="hero">
       <div class="container hero-grid">
@@ -135,18 +89,9 @@
             <a class="btn" href="tel:+33743668266">Appeler le +33 7 43 66 82 66</a>
           </div>
           <div class="kpis">
-            <div class="hero-card" aria-label="Bénéfice 1">
-              <div class="logo-badge" style="width:30px;height:30px">↑</div>
-              <div><strong>Modernisation mesurable</strong><span class="muted">Perf, coûts, sécurité : on mesure avant/après.</span></div>
-            </div>
-            <div class="hero-card" aria-label="Bénéfice 2">
-              <div class="logo-badge" style="width:30px;height:30px">⚙</div>
-              <div><strong>Automatisation fiable</strong><span class="muted">IaC, CI/CD, observabilité, remédiations.</span></div>
-            </div>
-            <div class="hero-card" aria-label="Bénéfice 3">
-              <div class="logo-badge" style="width:30px;height:30px">🔒</div>
-              <div><strong>Sécurité by‑default</strong><span class="muted">Identités, endpoints, surface d’attaque réduite.</span></div>
-            </div>
+            <div class="hero-card" aria-label="Bénéfice 1"><div class="logo-badge" style="width:30px;height:30px">↑</div><div><strong>Modernisation mesurable</strong><span class="muted">Perf, coûts, sécurité : on mesure avant/après.</span></div></div>
+            <div class="hero-card" aria-label="Bénéfice 2"><div class="logo-badge" style="width:30px;height:30px">⚙</div><div><strong>Automatisation fiable</strong><span class="muted">IaC, CI/CD, observabilité, remédiations.</span></div></div>
+            <div class="hero-card" aria-label="Bénéfice 3"><div class="logo-badge" style="width:30px;height:30px">🔒</div><div><strong>Sécurité by‑default</strong><span class="muted">Identités, endpoints, surface d’attaque réduite.</span></div></div>
           </div>
         </div>
         <div>
@@ -158,37 +103,23 @@
               <li><strong>AutomateOps</strong> — patching, déploiements, alerting & remédiations automatisés.</li>
               <li><strong>SecBaseline</strong> — hygiène M365/Endpoint, durcissement, conformité de base.</li>
             </ul>
-            <p class="muted tiny">Besoin d’un devis ? <a href="mailto:contact@aureca.fr">contact@aureca.fr</a></p>
+            <p class="muted tiny">Besoin d’un devis ? <a href="mailto:contact@aureca.fr">contact@aureca.fr</a></p>
           </div>
         </div>
       </div>
     </section>
-
     <section id="services">
       <div class="container">
         <h2>Services</h2>
-        <p class="muted">Du <strong>conseil</strong> à la <strong>mise en œuvre</strong> puis au <strong>run</strong>, en focalisant la valeur : fiabilité, sécurité, vitesse de livraison.</p>
+        <p class="muted">Du <strong>conseil</strong> à la <strong>mise en œuvre</strong> puis au <strong>run</strong>, en focalisant la valeur : fiabilité, sécurité, vitesse de livraison.</p>
         <div class="grid cards">
-          <article class="card">
-            <h3>Conseil & Audit</h3>
-            <p>Audit de maturité, cartographie risques/coûts, architecture cible, feuille de route <em>pragmatique</em>.</p>
-          </article>
-          <article class="card">
-            <h3>Projets</h3>
-            <p>AD/AAD, réseaux, M365, migration cloud, data/IA : delivery outillé, délais tenus.</p>
-          </article>
-          <article class="card">
-            <h3>Automatisation & Fiabilité</h3>
-            <p>IaC (Terraform/Bicep), CI/CD, observabilité, SRE : moins d’incidents, MTTR réduit.</p>
-          </article>
-          <article class="card">
-            <h3>Cyber par défaut</h3>
-            <p>Durcissement, gestion des identités & accès, endpoint security, posture cloud.</p>
-          </article>
+          <article class="card"><h3>Conseil & Audit</h3><p>Audit de maturité, cartographie risques/coûts, architecture cible, feuille de route <em>pragmatique</em>.</p></article>
+          <article class="card"><h3>Projets</h3><p>AD/AAD, réseaux, M365, migration cloud, data/IA : delivery outillé, délais tenus.</p></article>
+          <article class="card"><h3>Automatisation & Fiabilité</h3><p>IaC (Terraform/Bicep), CI/CD, observabilité, SRE : moins d’incidents, MTTR réduit.</p></article>
+          <article class="card"><h3>Cyber par défaut</h3><p>Durcissement, gestion des identités & accès, endpoint security, posture cloud.</p></article>
         </div>
       </div>
     </section>
-
     <section id="methode">
       <div class="container">
         <h2>Méthode</h2>
@@ -200,23 +131,14 @@
         </div>
       </div>
     </section>
-
     <section id="contact">
       <div class="container contact">
         <div>
           <h2>Contact</h2>
           <p class="muted">Un projet, une question ? Réponse sous 24 h ouvrées.</p>
           <div class="card" style="display:grid;gap:10px">
-            <div>
-              <strong>Email</strong><br>
-              <a href="mailto:contact@aureca.fr">contact@aureca.fr</a>
-              <button class="btn" style="margin-left:8px" onclick="copy('contact@aureca.fr')">Copier</button>
-            </div>
-            <div>
-              <strong>Téléphone</strong><br>
-              <a href="tel:+33743668266">+33 7 43 66 82 66</a>
-              <button class="btn" style="margin-left:8px" onclick="copy('+33743668266')">Copier</button>
-            </div>
+            <div><strong>Email</strong><br><a href="mailto:contact@aureca.fr">contact@aureca.fr</a><button class="btn" style="margin-left:8px" onclick="copy('contact@aureca.fr')">Copier</button></div>
+            <div><strong>Téléphone</strong><br><a href="tel:+33743668266">+33 7 43 66 82 66</a><button class="btn" style="margin-left:8px" onclick="copy('+33743668266')">Copier</button></div>
             <div id="copy-toast" hidden class="muted tiny">Copié ✅</div>
           </div>
         </div>
@@ -234,7 +156,6 @@
         </div>
       </div>
     </section>
-
     <section id="mentions">
       <div class="container">
         <h2>Mentions légales</h2>
@@ -249,18 +170,12 @@
       </div>
     </section>
   </main>
-
   <footer>
     <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap">
       <div>© <span id="year2"></span> AURECA</div>
-      <div class="muted tiny">Advisory — Modern Systems, Networks, Cloud & Automation</div>
+      <div class="muted tiny">Advisory — Modern Systems, Networks, Cloud & Automation · <a href="/privacy.html">Politique de confidentialité</a></div>
     </div>
   </footer>
-
-  <script>
-    const y = new Date().getFullYear();
-    document.getElementById('year').textContent = y;
-    document.getElementById('year2').textContent = y;
-  </script>
+  <script>const y=new Date().getFullYear();document.getElementById('year').textContent=y;document.getElementById('year2').textContent=y;</script>
 </body>
 </html>
