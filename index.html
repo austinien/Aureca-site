@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="fr" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AURECA — Conseil, Modernisation Systèmes & Réseaux, Cloud, Automatisation</title>
+  <meta name="description" content="AURECA accompagne les DSI et PME à moderniser l'existant, automatiser l'exploitation et sécuriser les environnements hybrides — audit, projets, run fiable.">
+  <meta name="theme-color" content="#111827">
+  <meta property="og:title" content="AURECA — Moderniser. Automatiser. Opérer.">
+  <meta property="og:description" content="Conseil & projets en systèmes, réseaux, cloud et automatisation. Renouveler l’existant. Accélérer la suite.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.aureca.fr/">
+  <meta property="og:image" content="https://www.aureca.fr/og-image.png">
+  <style>
+    :root{
+      --bg: #0b1020;        /* bleu nuit profond */
+      --bg-2:#0f1630;
+      --fg: #e8eef6;        /* texte principal */
+      --muted:#a9b5c7;      /* texte secondaire */
+      --brand:#36D1A8;      /* accent menthe */
+      --brand-2:#6EE7D3;    /* accent clair */
+      --card:#121a34;       /* fond cartes */
+      --line:rgba(255,255,255,0.08);
+      --shadow: 0 20px 35px rgba(0,0,0,.35);
+      --radius: 18px;
+    }
+    @media (prefers-color-scheme: light) {
+      :root{--bg:#ffffff;--bg-2:#f5f7fb;--fg:#0b1020;--muted:#4a5568;--card:#ffffff;--line:rgba(0,0,0,.07);--shadow:0 10px 25px rgba(17,24,39,.08)}
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:radial-gradient(1200px 600px at 70% -10%, #1b255a 0%, transparent 60%), linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);color:var(--fg);font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";line-height:1.55}
+    a{color:var(--brand);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:1120px;margin:0 auto;padding:0 20px}
+    header{position:sticky;top:0;z-index:50;background:linear-gradient(180deg, rgba(11,16,32,.85), rgba(11,16,32,.55));backdrop-filter:saturate(1.2) blur(8px);border-bottom:1px solid var(--line)}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .logo{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.5px}
+    .logo-badge{display:grid;place-items:center;width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg, var(--brand), var(--brand-2));color:#001b12;font-weight:900;box-shadow:var(--shadow)}
+    .logo-word{font-size:1.05rem}
+    .nav a{color:var(--fg);opacity:.85}
+    .nav-links{display:flex;gap:20px}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:12px;border:1px solid var(--line);background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));color:var(--fg);font-weight:600}
+    .btn:hover{transform:translateY(-1px);box-shadow:var(--shadow)}
+    .btn-primary{background:linear-gradient(135deg, var(--brand), var(--brand-2));color:#04251c;border:none}
+
+    /* hero */
+    .hero{padding:90px 0 40px;position:relative}
+    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
+    .eyebrow{display:inline-block;padding:6px 10px;border:1px solid var(--line);border-radius:999px;font-size:.85rem;color:var(--muted)}
+    h1{font-size:clamp(2rem, 3.6vw, 3rem);line-height:1.1;margin:18px 0 12px}
+    .lead{font-size:1.15rem;color:var(--muted);max-width:55ch}
+    .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+    .hero-card{background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));border:1px solid var(--line);border-radius:var(--radius);padding:18px;display:flex;gap:12px;align-items:flex-start}
+    .hero-card strong{display:block}
+    .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:24px}
+
+    /* sections */
+    section{padding:56px 0;border-top:1px solid var(--line)}
+    h2{font-size:clamp(1.6rem, 2.6vw, 2.2rem);margin:0 0 10px}
+    .muted{color:var(--muted)}
+    .grid{display:grid;gap:16px}
+    .cards{grid-template-columns:repeat(2,1fr)}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px}
+    .card h3{margin:0 0 6px}
+    .list{margin:0;padding-left:18px}
+
+    /* timeline */
+    .timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .step{position:relative;padding:18px;border:1px dashed var(--line);border-radius:var(--radius);background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.01))}
+    .step .n{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:999px;background:linear-gradient(135deg, var(--brand), var(--brand-2));color:#07261c;font-weight:800;margin-bottom:6px}
+
+    /* contact */
+    .contact{display:grid;grid-template-columns:1.1fr .9fr;gap:20px}
+    form{display:grid;gap:12px}
+    input,textarea{width:100%;padding:12px 14px;border-radius:12px;border:1px solid var(--line);background:rgba(255,255,255,.02);color:var(--fg)}
+    label{font-weight:600}
+
+    footer{padding:30px 0;border-top:1px solid var(--line);color:var(--muted)}
+    .tiny{font-size:.9rem}
+
+    /* responsive */
+    @media (max-width: 980px){
+      .hero-grid{grid-template-columns:1fr}
+      .kpis{grid-template-columns:1fr 1fr}
+      .cards{grid-template-columns:1fr}
+      .timeline{grid-template-columns:1fr 1fr}
+      .contact{grid-template-columns:1fr}
+      .nav-links{display:none}
+      .menu-btn{display:inline-flex}
+    }
+    @media (min-width: 981px){.menu-btn{display:none}}
+  </style>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' x2='1' y1='1' y2='0'%3E%3Cstop stop-color='%2336D1A8'/%3E%3Cstop offset='1' stop-color='%236EE7D3'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect rx='12' ry='12' width='48' height='48' fill='url(%23g)'/%3E%3Ctext x='50%25' y='58%25' text-anchor='middle' font-family='Inter,Arial' font-size='22' font-weight='900' fill='%2304251c'%3EA%3C/text%3E%3C/svg%3E">
+  <script>
+    document.documentElement.classList.remove('no-js');
+    function copy(text){navigator.clipboard?.writeText(text);const t=document.getElementById('copy-toast');if(t){t.hidden=false;setTimeout(()=>t.hidden=true,1800)}}
+    function toggleMenu(){const l=document.querySelector('.nav-links');if(!l)return;l.style.display = l.style.display==='flex' ? 'none' : 'flex'}
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "AURECA",
+    "url": "https://www.aureca.fr/",
+    "description": "Conseil & projets en systèmes, réseaux, cloud et automatisation.",
+    "email": "contact@aureca.fr",
+    "telephone": "+33 7 43 66 82 66",
+    "sameAs": [],
+    "logo": "https://www.aureca.fr/logo.svg"
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="logo" href="#">
+        <span class="logo-badge" aria-hidden="true">A</span>
+        <span class="logo-word">AURECA</span>
+      </a>
+      <nav>
+        <button class="btn menu-btn" onclick="toggleMenu()" aria-label="Ouvrir le menu">Menu</button>
+        <div class="nav-links">
+          <a href="#services">Services</a>
+          <a href="#methode">Méthode</a>
+          <a href="#contact">Contact</a>
+          <a class="btn" href="#mentions">Mentions légales</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Conseil · Systèmes & Réseaux · Cloud · Automatisation · Sécurité</span>
+          <h1>Renouveler l’existant. <br>Accélérer la suite.</h1>
+          <p class="lead">AURECA conçoit et livre des plateformes **simples, sûres et efficaces** : audit pragmatique, modernisation cloud, automatisation (IaC/CI‑CD/SRE) et sécurité intégrée. Objectif : moins d’incidents, plus de débit de changement — **mesurable**.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="mailto:contact@aureca.fr?subject=Demande%20d'audit%20AURECA">Demander un audit</a>
+            <a class="btn" href="tel:+33600000000">Appeler le +33 7 43 66 82 66</a>
+          </div>
+          <div class="kpis">
+            <div class="hero-card" aria-label="Bénéfice 1">
+              <div class="logo-badge" style="width:30px;height:30px">↑</div>
+              <div><strong>Modernisation mesurable</strong><span class="muted">Perf, coûts, sécurité : on mesure avant/après.</span></div>
+            </div>
+            <div class="hero-card" aria-label="Bénéfice 2">
+              <div class="logo-badge" style="width:30px;height:30px">⚙</div>
+              <div><strong>Automatisation fiable</strong><span class="muted">IaC, CI/CD, observabilité, remédiations.</span></div>
+            </div>
+            <div class="hero-card" aria-label="Bénéfice 3">
+              <div class="logo-badge" style="width:30px;height:30px">🔒</div>
+              <div><strong>Sécurité by‑default</strong><span class="muted">Identités, endpoints, surface d’attaque réduite.</span></div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="card" style="box-shadow:var(--shadow)">
+            <h3 style="margin-top:0">Offres clé en main</h3>
+            <ul class="list">
+              <li><strong>Audit Express (10–15 j)</strong> — état des lieux, risques & quick‑wins, roadmap priorisée.</li>
+              <li><strong>Cloud Landing</strong> — landing zone sécurisée, pipelines IaC, gouvernance.</li>
+              <li><strong>AutomateOps</strong> — patching, déploiements, alerting & remédiations automatisés.</li>
+              <li><strong>SecBaseline</strong> — hygiène M365/Endpoint, durcissement, conformité de base.</li>
+            </ul>
+            <p class="muted tiny">Besoin d’un devis ? <a href="mailto:contact@aureca.fr">contact@aureca.fr</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <h2>Services</h2>
+        <p class="muted">Du <strong>conseil</strong> à la <strong>mise en œuvre</strong> puis au <strong>run</strong>, en focalisant la valeur : fiabilité, sécurité, vitesse de livraison.</p>
+        <div class="grid cards">
+          <article class="card">
+            <h3>Conseil & Audit</h3>
+            <p>Audit de maturité, cartographie risques/coûts, architecture cible, feuille de route <em>pragmatique</em>.</p>
+          </article>
+          <article class="card">
+            <h3>Projets</h3>
+            <p>AD/AAD, réseaux, M365, migration cloud, data/IA : delivery outillé, délais tenus.</p>
+          </article>
+          <article class="card">
+            <h3>Automatisation & Fiabilité</h3>
+            <p>IaC (Terraform/Bicep), CI/CD, observabilité, SRE : moins d’incidents, MTTR réduit.</p>
+          </article>
+          <article class="card">
+            <h3>Cyber par défaut</h3>
+            <p>Durcissement, gestion des identités & accès, endpoint security, posture cloud.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="methode">
+      <div class="container">
+        <h2>Méthode</h2>
+        <div class="timeline">
+          <div class="step"><div class="n">1</div><strong>Diagnostic</strong><br><span class="muted">Données, risques, opportunités, objectifs business.</span></div>
+          <div class="step"><div class="n">2</div><strong>Design</strong><br><span class="muted">Architecture cible, priorités, ROI & plan d’actions.</span></div>
+          <div class="step"><div class="n">3</div><strong>Delivery</strong><br><span class="muted">Migrations outillées, automatisations, sécurité intégrée.</span></div>
+          <div class="step"><div class="n">4</div><strong>Run augmenté</strong><br><span class="muted">Observabilité, remédiations, amélioration continue.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container contact">
+        <div>
+          <h2>Contact</h2>
+          <p class="muted">Un projet, une question ? Réponse sous 24 h ouvrées.</p>
+          <div class="card" style="display:grid;gap:10px">
+            <div>
+              <strong>Email</strong><br>
+              <a href="mailto:contact@aureca.fr">contact@aureca.fr</a>
+              <button class="btn" style="margin-left:8px" onclick="copy('contact@aureca.fr')">Copier</button>
+            </div>
+            <div>
+              <strong>Téléphone</strong><br>
+              <a href="tel:+33600000000">+33 7 43 66 82 66</a>
+              <button class="btn" style="margin-left:8px" onclick="copy('+33600000000')">Copier</button>
+            </div>
+            <div id="copy-toast" hidden class="muted tiny">Copié ✅</div>
+          </div>
+        </div>
+        <div>
+          <form action="mailto:contact@aureca.fr" method="post" enctype="text/plain">
+            <label for="f-nom">Nom</label>
+            <input id="f-nom" name="Nom" placeholder="Prénom Nom" required>
+            <label for="f-mail">Email</label>
+            <input id="f-mail" name="Email" type="email" placeholder="vous@domaine.com" required>
+            <label for="f-msg">Message</label>
+            <textarea id="f-msg" name="Message" rows="5" placeholder="Parlez‑nous de vos objectifs…" required></textarea>
+            <button class="btn btn-primary" type="submit">Envoyer</button>
+            <p class="tiny muted">En envoyant, vous acceptez d’être contacté par AURECA. Aucune donnée transmise à des tiers.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section id="mentions">
+      <div class="container">
+        <h2>Mentions légales</h2>
+        <div class="card">
+          <p class="tiny muted">
+            Éditeur : <strong>AURECA</strong> — Micro‑entreprise (en cours de création).<br>
+            Siège social : <em>à compléter</em> — Email : <a href="mailto:contact@aureca.fr">contact@aureca.fr</a> — Tél. : <a href="tel:+33600000000">+33 7 43 66 82 66</a>.<br>
+            Directeur de publication : <em>à compléter</em>. Hébergeur : <em>à compléter</em> (par ex. Netlify / Vercel / GitHub Pages).<br>
+            © <span id="year"></span> AURECA. Tous droits réservés.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap">
+      <div>© <span id="year2"></span> AURECA</div>
+      <div class="muted tiny">Advisory — Modern Systems, Networks, Cloud & Automation</div>
+    </div>
+  </footer>
+
+  <script>
+    const y = new Date().getFullYear();
+    document.getElementById('year').textContent = y;
+    document.getElementById('year2').textContent = y;
+  </script>
+</body>
+</html>
