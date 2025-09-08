@@ -1,14 +1,14 @@
 <!doctype html>
 <html lang="fr" class="no-js">
 <head>
-  <meta charset="utf-8">
+  <meta charset=\"utf-8\">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AURECA — Conseil, Modernisation Systèmes & Réseaux, Cloud, Automatisation</title>
-  <meta name="description" content="AURECA aide les DSI/PME à moderniser l'existant, automatiser l'exploitation et sécuriser les environnements hybrides — audit, projets, run fiable.">
+  <meta name="description" content="AURECA accompagne les DSI et PME à moderniser l'existant, automatiser l'exploitation et sécuriser les environnements hybrides — audit, projets, run fiable.">
   <meta name="theme-color" content="#111827">
-  <meta property="og:title" content="AURECA — Moderniser et automatiser vos systèmes.">
-  <meta property="og:description" content="Audit, cloud & réseaux, automatisation (IaC/CI/CD), sécurité intégrée. Résultats mesurables en semaines.">
+  <meta property="og:title" content="AURECA — Moderniser. Automatiser. Opérer.">
+  <meta property="og:description" content="Conseil & projets en systèmes, réseaux, cloud et automatisation. Renouveler l’existant. Accélérer la suite.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.aureca.fr/">
   <meta property="og:image" content="https://www.aureca.fr/og-image.png">
@@ -29,15 +29,15 @@
     .btn{display:inline-flex;align-items:center;gap:10px;padding:13px 20px;border-radius:14px;border:1px solid var(--line);background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));color:var(--fg);font-weight:600}
     .btn:hover{transform:translateY(-1px);box-shadow:var(--shadow)}
     .btn-primary{background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#04251c;border:none}
-
-    /* HERO allégé */
     .hero{padding:120px 0 70px}
-    .hero-grid{display:grid;grid-template-columns:1fr;gap:28px}
+    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
     .eyebrow{display:inline-block;padding:8px 12px;border:1px solid var(--line);border-radius:999px;font-size:.9rem;color:var(--muted)}
     h1{font-size:clamp(2.4rem,3.8vw,3.4rem);line-height:1.15;margin:20px 0 14px;letter-spacing:.2px}
-    .lead{font-size:1.2rem;color:var(--muted);max-width:64ch}
+    .lead{font-size:1.2rem;color:var(--muted);max-width:68ch}
     .cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:26px}
-
+    .hero-card{background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));border:1px solid var(--line);border-radius:var(--radius);padding:20px;display:flex;gap:14px;align-items:flex-start}
+    .hero-card strong{display:block;margin-bottom:2px}
+    .kpis{display:grid;grid-template-columns:repeat(3, minmax(0,1fr));gap:16px;margin-top:28px}
     section{padding:80px 0;border-top:1px solid var(--line)}
     h2{font-size:clamp(1.8rem,2.6vw,2.3rem);margin:0 0 14px}
     .muted{color:var(--muted)}
@@ -55,7 +55,7 @@
     label{font-weight:600}
     footer{padding:34px 0;border-top:1px solid var(--line);color:var(--muted)}
     .tiny{font-size:.95rem}
-    @media (max-width:980px){ .cards{grid-template-columns:1fr} .timeline{grid-template-columns:1fr 1fr} .contact{grid-template-columns:1fr} .nav-links{display:none} .menu-btn{display:inline-flex} .hero{padding-top:84px} }
+    @media (max-width:980px){ .hero-grid{grid-template-columns:1fr} .kpis{grid-template-columns:1fr 1fr} .cards{grid-template-columns:1fr} .timeline{grid-template-columns:1fr 1fr} .contact{grid-template-columns:1fr} .nav-links{display:none} .menu-btn{display:inline-flex} .hero{padding-top:84px} }
     @media (min-width:981px){.menu-btn{display:none}}
   </style>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' x2='1' y1='1' y2='0'%3E%3Cstop stop-color='%2336D1A8'/%3E%3Cstop offset='1' stop-color='%236EE7D3'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect rx='12' ry='12' width='48' height='48' fill='url(%23g)'/%3E%3Ctext x='50%25' y='58%25' text-anchor='middle' font-family='Inter,Arial' font-size='22' font-weight='900' fill='%2304251c'%3EA%3C/text%3E%3C/svg%3E">
@@ -77,35 +77,40 @@
       </nav>
     </div>
   </header>
-
   <main>
     <section class="hero">
       <div class="container hero-grid">
         <div>
-          <span class="eyebrow">Conseil · Modernisation · Cloud · Automatisation</span>
-          <h1>Moderniser et automatiser vos systèmes.</h1>
-          <p class="lead">Audit pragmatique, projets cloud & réseaux, automatisation (IaC/CI/CD) et sécurité intégrée. Des résultats mesurables en semaines, pas en mois.</p>
+          <span class="eyebrow">Conseil · Systèmes & Réseaux · Cloud · Automatisation · Sécurité</span>
+          <h1>Conseil - Modernisation - Cloud - Automatisation</h1>
+          <p class="lead">moderniser et automatiser vos systèmes</p>
           <div class="cta-row">
             <a class="btn btn-primary" href="mailto:contact@aureca.fr?subject=Demande%20d'audit%20AURECA">Demander un audit</a>
-            <a class="btn" href="#services">Voir nos offres</a>
+            <a class="btn" href="tel:+33743668266">Appeler le +33 7 43 66 82 66</a>
+          </div>
+          <div><strong>Modernisation mesurable</strong><span class="muted">Perf, coûts, sécurité : on mesure avant/après.</span></div></div>
+            <div class="hero-card" aria-label="Bénéfice 2"><div class="logo-badge" style="width:30px;height:30px">⚙</div><div><strong>Automatisation fiable</strong><span class="muted">IaC, CI/CD, observabilité, remédiations.</span></div></div>
+            <div class="hero-card" aria-label="Bénéfice 3"><div class="logo-badge" style="width:30px;height:30px">🔒</div><div><strong>Sécurité by‑default</strong><span class="muted">Identités, endpoints, surface d’attaque réduite.</span></div></div>
+          </div>
+        </div>
+        <div>
+          <div class="card" style="box-shadow:var(--shadow)">
+            <h3 style="margin-top:0">Offres clé en main</h3>
+            <ul class="list">
+              <li><strong>Audit Express (10–15 j)</strong> — état des lieux, risques & quick‑wins, roadmap priorisée.</li>
+              <li><strong>Cloud Landing</strong> — landing zone sécurisée, pipelines IaC, gouvernance.</li>
+              <li><strong>AutomateOps</strong> — patching, déploiements, alerting & remédiations automatisés.</li>
+              <li><strong>SecBaseline</strong> — hygiène M365/Endpoint, durcissement, conformité de base.</li>
+            </ul>
+            <p class="muted tiny">Besoin d’un devis ? <a href="mailto:contact@aureca.fr">contact@aureca.fr</a></p>
           </div>
         </div>
       </div>
     </section>
-
     <section id="services">
       <div class="container">
         <h2>Services</h2>
-        <p class="muted">Du <strong>conseil</strong> à la <strong>mise en œuvre</strong> puis au <strong>run</strong>, avec un focus constant sur la fiabilité, la sécurité et la vitesse de livraison.</p>
-        <div class="card" style="margin:20px 0">
-          <h3 style="margin-top:0">Offres clé en main</h3>
-          <ul class="list">
-            <li><strong>Audit Express (10–15 j)</strong> — état des lieux, quick‑wins, roadmap priorisée.</li>
-            <li><strong>Cloud Landing</strong> — landing zone sécurisée, pipelines IaC, gouvernance.</li>
-            <li><strong>AutomateOps</strong> — déploiements, patching & remédiations automatisés.</li>
-            <li><strong>SecBaseline</strong> — hygiène M365/Endpoint et durcissement.</li>
-          </ul>
-        </div>
+        <p class="muted">Du <strong>conseil</strong> à la <strong>mise en œuvre</strong> puis au <strong>run</strong>, en focalisant la valeur : fiabilité, sécurité, vitesse de livraison.</p>
         <div class="grid cards">
           <article class="card"><h3>Conseil & Audit</h3><p>Audit de maturité, cartographie risques/coûts, architecture cible, feuille de route <em>pragmatique</em>.</p></article>
           <article class="card"><h3>Projets</h3><p>AD/AAD, réseaux, M365, migration cloud, data/IA : delivery outillé, délais tenus.</p></article>
@@ -114,19 +119,17 @@
         </div>
       </div>
     </section>
-
     <section id="methode">
       <div class="container">
         <h2>Méthode</h2>
         <div class="timeline">
-          <div class="step"><div class="n">1</div><strong>Diagnostic</strong><br><span class="muted">Données, risques, objectifs business.</span></div>
+          <div class="step"><div class="n">1</div><strong>Diagnostic</strong><br><span class="muted">Données, risques, opportunités, objectifs business.</span></div>
           <div class="step"><div class="n">2</div><strong>Design</strong><br><span class="muted">Architecture cible, priorités, ROI & plan d’actions.</span></div>
           <div class="step"><div class="n">3</div><strong>Delivery</strong><br><span class="muted">Migrations outillées, automatisations, sécurité intégrée.</span></div>
           <div class="step"><div class="n">4</div><strong>Run augmenté</strong><br><span class="muted">Observabilité, remédiations, amélioration continue.</span></div>
         </div>
       </div>
     </section>
-
     <section id="contact">
       <div class="container contact">
         <div>
@@ -152,7 +155,6 @@
         </div>
       </div>
     </section>
-
     <section id="mentions">
       <div class="container">
         <h2>Mentions légales</h2>
@@ -167,14 +169,12 @@
       </div>
     </section>
   </main>
-
   <footer>
     <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap">
       <div>© <span id="year2"></span> AURECA</div>
       <div class="muted tiny">Advisory — Modern Systems, Networks, Cloud & Automation · <a href="/privacy.html">Politique de confidentialité</a></div>
     </div>
   </footer>
-
   <script>const y=new Date().getFullYear();document.getElementById('year').textContent=y;document.getElementById('year2').textContent=y;</script>
 </body>
 </html>
